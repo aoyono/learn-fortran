@@ -1,4 +1,8 @@
 VAR=hello
+VAR2=world
 
-default:
-	echo ${VAR}
+merry:
+	@echo ${VAR}
+
+fun:
+	@echo ${VAR2}
