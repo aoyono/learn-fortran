@@ -13,5 +13,9 @@ clean:
 	rm *.o *.mod maths
 
 DEPFLAGS=-M -cpp
-deps:
-	@$(FC) $(DEPFLAGS) $(SRC)
+deps: $(SRC)
+	@$(FC) $(DEPFLAGS) $(SRC) > make.deps
+
+make.deps: deps
+
+include make.deps
