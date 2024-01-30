@@ -33,3 +33,15 @@ replacement options.
 Example in the Makefile for the `maths` program (see
 [./Makefile](Makefile)): `%.o` says that the target is any file that
 ends with the `.o` extension
+
+### Compiling with Makefile when there are many module
+
+If a file with a module is modified, then the dependent file should
+also be recompiled. One way to ensure this is by using Makefile
+dependency specification in the target, but it's difficult to specify
+all the dependencies for bigger code. Plus, the recompilation
+requirement is necessary only if the interface changes. One way could
+be to: *ensure that the files are compiled in the correct order* (the
+file with the module on which another depends should come before it)
+and do the make cleanup call (with a `clean` target) when you know the
+interface of a routine has changed.
