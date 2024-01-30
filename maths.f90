@@ -1,10 +1,10 @@
 program maths
+  ! pretty explicit: give me only these names from the module, like in Python: from geometry import area, pi
+  use geometry, only: area, pi
   implicit none
-  real :: r, area
-  real, parameter :: pi = 4.*atan(1.)
+  real :: r
 
   r = 2.0
-  area = pi * r ** 2
   print*, ' pi is ', pi
-  print*, ' the area of a circle of radius ', r, ' is ', area
+  print*, ' the area of a circle of radius ', r, ' is ', area(r)
 end program maths
