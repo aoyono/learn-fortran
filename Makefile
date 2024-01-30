@@ -11,3 +11,7 @@ maths: $(OBJ)
 
 clean:
 	rm *.o *.mod maths
+
+DEPFLAGS=-M -cpp
+deps:
+	@$(FC) $(DEPFLAGS) $(SRC)

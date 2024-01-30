@@ -45,3 +45,5 @@ be to: *ensure that the files are compiled in the correct order* (the
 file with the module on which another depends should come before it)
 and do the make cleanup call (with a `clean` target) when you know the
 interface of a routine has changed.
+
+A solution given thanks to `gfortran` is to generate dependencies target automatically (see the Makefile) and include the resulting file in the Makefile.
