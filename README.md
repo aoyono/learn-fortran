@@ -24,3 +24,6 @@ make VAR=goodbye fun
 Special variables:
 - `$@` refers to target name
 - `$<` refers to name of all the dependencies
+
+Variables can be defined from other variables with various string
+replacement options.
