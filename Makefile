@@ -4,5 +4,5 @@ VAR2=world
 merry:
 	@echo ${VAR}
 
-fun:
+fun: merry
 	@echo ${VAR2}
