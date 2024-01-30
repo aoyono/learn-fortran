@@ -1,12 +1,13 @@
-VAR=hello
-VAR2=world
-VAR3=${VAR2:world=planet}
+FC=gfortran
+FFLAGS=-O3 -Wall -Wextra
+SRC=area.f90 maths.f90
+OBJ=${SRC:.f90=.o}
 
-merry:
-	@echo ${VAR}
+%.o: %.f90
+	$(FC) $(FFLAGS) -o $@ -c $<
 
-fun: merry
-	@echo ${VAR2} is $@ and $<
+maths: $(OBJ)
+	$(FC) $(FFLAGS) -o $@ $(OBJ)
 
-hay: merry
-	@echo ${VAR3}
+clean:
+	rm *.o *.mod maths

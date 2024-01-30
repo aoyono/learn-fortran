@@ -27,3 +27,9 @@ Special variables:
 
 Variables can be defined from other variables with various string
 replacement options.
+
+### Wildcard rule
+
+Example in the Makefile for the `maths` program (see
+[./Makefile](Makefile)): `%.o` says that the target is any file that
+ends with the `.o` extension
