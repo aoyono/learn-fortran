@@ -8,3 +8,19 @@ Some resources:
 - https://www.fortrantutorial.com/
 - https://www.fortran90.org/
 - https://duckduckgo.com/?t=ffab&q=learn+fortran+90&atb=v350-1&ia=web
+
+
+## Using Makefiles
+
+### Variables in Makefiles
+
+It's possible to override variables defined in the Makefile by setting
+them in the call to make:
+
+``` shell
+make VAR=goodbye fun
+```
+
+Special variables:
+- `$@` refers to target name
+- `$<` refers to name of all the dependencies

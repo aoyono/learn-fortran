@@ -5,4 +5,4 @@ merry:
 	@echo ${VAR}
 
 fun: merry
-	@echo ${VAR2}
+	@echo ${VAR2} is $@ and $<
